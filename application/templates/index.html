@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h3>QRCode Generator And Decoder</h3>
+<div class="d-flex justify-content-center mt-4">
+    <div style="margin:auto; width: 50%; border: 3px solid green; padding: 0;">
+        <img style="margin: 0px;" src="{{ url_for('static', filename='61b1545c8b65bbdbfe19.png') }}" alt="qrcode Image">
+    </div>
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+    <a class="btn btn-success m-2" href="{{ url_for('generate_qrcode') }}">Generate QRCode</a>
+    <a class="btn btn-danger m-2" href="{{ url_for('upload') }}">Read QRCode</a>
+</div>
+
+{% endblock %}
